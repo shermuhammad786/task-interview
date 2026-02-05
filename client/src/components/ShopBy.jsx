@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import HorSlider from "./HorSlider";
 
-const ShopBy = ({ filter, title }) => {
+const ShopBy = ({ filter, title, copied }) => {
   const [products, setProducts] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -34,7 +34,7 @@ const ShopBy = ({ filter, title }) => {
 
   return (
     <>
-      <div className="mt-10 mb-2 text-2xl">{title}</div>
+      {copied !== 'true' && <div className="mt-10 mb-2 text-2xl">{title}</div>}
       <div className="overflow-x-auto overflow-y-hidden md:max-w-full scroll-container mb-10 mx-auto relative scroll-container">
         {loading && <p>Loading...</p>}
         {error && <p>Error while fetching: {error.message}</p>}

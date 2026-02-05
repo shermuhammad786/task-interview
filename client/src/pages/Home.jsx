@@ -12,9 +12,10 @@ const Home = () => {
       <div className="md:w-full md:max-w-full xs:mx-2  sm:mx-auto ">
         <div className="prose prose-2xl">
           <ShopBy title="Best Sellers" filter="bestSellers" />
+          <ShopBy title="Top Rated" filter="topRated" copied='true' />
         </div>
         <div className="prose prose-2xl">
-          <ShopBy title="Top Rated" filter="topRated" />
+          <ShopBy title="Top Rated" filter="topRated" copied='false' />
         </div>
       </div>
     </div>
